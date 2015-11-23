@@ -1,0 +1,42 @@
+{
+  "name": "tonal.set",
+  "version": "0.0.0",
+  "private": "true",
+  "description": "Musical pitch sets",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "vows --spec test/*.js",
+    "docs": "documentation -f md > API.md",
+    "dist": "browserify lib/index.js | uglifyjs > dist/tonal.set.min.js&& ls -hall dist/",
+    "disc": "browserify --full-paths lib/index.js | uglifyjs | discify > dist/disc.html",
+    "coverage": "istanbul cover vows test/*.js",
+    "cover": "npm run coverage && open ./coverage/lcov-report/index.html",
+    "climate": "npm run coverage && npm run codeclimate",
+    "codeclimate": "CODECLIMATE_REPO_TOKEN= codeclimate-test-reporter < coverage/lcov.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danigb/tonal.set.git"
+  },
+  "keywords": [
+    "music",
+    "theory",
+    "pitch",
+    "set",
+    "tonal"
+  ],
+  "author": "danigb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danigb/tonal.set/issues"
+  },
+  "homepage": "https://github.com/danigb/tonal.set#readme",
+  "devDependencies": {
+    "vows": "^0.8.x"
+  },
+  "dependencies": {
+    "tonal.distance": "file:../distance",
+    "tonal.pitch": "file:../pitch/lib",
+    "tonal.transpose": "file:../transpose"
+  }
+}
