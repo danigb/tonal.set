@@ -5,6 +5,7 @@
   "description": "Musical pitch sets",
   "main": "lib/index.js",
   "scripts": {
+    "build": "cp README.md lib/ && npm test && npm run docs && npm run coverage && npm run disc && npm run dist",
     "test": "vows --spec test/*.js",
     "docs": "documentation -f md > API.md",
     "dist": "browserify lib/index.js | uglifyjs > dist/tonal.set.min.js&& ls -hall dist/",
@@ -35,8 +36,8 @@
     "vows": "^0.8.x"
   },
   "dependencies": {
-    "tonal.distance": "file:../distance",
-    "tonal.pitch": "file:../pitch/lib",
-    "tonal.transpose": "file:../transpose"
+    "tonal.gamut": "0.0.x",
+    "tonal.pitch": "0.0.x",
+    "tonal.transpose": "0.0.x"
   }
 }
