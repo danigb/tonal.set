@@ -8,7 +8,7 @@
 [![tonal](https://img.shields.io/badge/tonal-lib-yellow.svg)](https://www.npmjs.com/package/tonal)
 
 
-`tonal.set` is a collection of javascript functions to work with collections of notes or intervals:
+`tonal.set` is a collection of javascript functions to create and manipulate pitch sets:
 
 ```js
 var set = require('tonal.set')
