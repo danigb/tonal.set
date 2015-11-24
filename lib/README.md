@@ -23,6 +23,8 @@ Only via npm: `npm i --save tonal.set`
 
 ## User guide
 
+Read the [generated documentation](https://github.com/danigb/tonal.set/blob/master/API.md)
+
 ## License
 
 MIT License

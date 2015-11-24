@@ -1,13 +1,24 @@
 ## `set`
 
-In music.kit a set is a collection of pitch classes (or simple intervals)
-sorted in ascending order
+Create a set: a set is a list of uniq pitch classes or simplified intervals
+in ascending pitch order
 
-The `set` module has functions to create and manipulate set
+This is an alias of `gamut.set`
+
+### Parameters
+
+* `notes` **`String or Array`** the note list
 
 
+### Examples
 
+```js
+var set = require('music.set/set')
+set('E7 C2 e D5 c1') // => ['C', 'D', 'E']
+set('11 10 9') // => [ '2M', '3M', '4P' ]
+```
 
+Returns  the set
 
 
 ## `set.binary`
@@ -28,7 +39,7 @@ contains same intervals (regarding of note names)
 ### Examples
 
 ```js
-var binary = require('music.kit/set/binary')
+var binary = require('tonal.set/binary')
 binary('C2 E4 D3') // => '101010000000'
 ```
 
@@ -49,7 +60,7 @@ a note, you get a pitch set. If its false you get a interval set.
 ### Examples
 
 ```js
-var fromBinary = require('music.kit/gamut.fromBinary')
+var fromBinary = require('tonal.set/fromBinary')
 // use a 12 digit binary number:
 fromBinary('101011010101', 'C') // => ['C', 'D', 'E', 'F', 'G', 'A', 'B']
 // or its decimal equivalent:
@@ -59,28 +70,5 @@ fromBinary(2773, false) // => ['1P', '2M', '3M', '4', '5', '6M', '7M']
 ```
 
 Returns  the set pitch classes (note names without octaves)
-
-
-## `set.set`
-
-Create a set: a set is a list of uniq pitch classes or simplified intervals
-in ascending pitch order
-
-This is an alias of `gamut.set`
-
-### Parameters
-
-* `notes` **`String or Array`** the note list
-
-
-### Examples
-
-```js
-var set = require('music.set/set')
-set('E7 C2 e D5 c1') // => ['C', 'D', 'E']
-set('11 10 9') // => [ '2M', '3M', '4P' ]
-```
-
-Returns  the set
 
 
